@@ -1,1 +1,1 @@
-# ASE-2420030341-SmartBuy-AI-Based-Personalized-Shopping
+# ASE-SmartBuy-AI-Based-Personalized-Shopping
