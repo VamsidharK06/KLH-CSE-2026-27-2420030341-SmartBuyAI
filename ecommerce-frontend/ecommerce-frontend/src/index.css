@@ -1099,3 +1099,740 @@ h3 {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ===== SmartBuy homepage additions ===== */
+
+.smartbuy-intro {
+  margin: 48px 0;
+  padding: 36px;
+  text-align: center;
+  background: #f5f7ff;
+  border-radius: 20px;
+}
+
+.smartbuy-intro > h2 {
+  margin: 10px 0;
+  color: #172554;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.smartbuy-intro > p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.smartbuy-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+  text-align: left;
+}
+
+.smartbuy-benefit {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+  color: #4338ca;
+  background: #eef2ff;
+  border-radius: 12px;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.smartbuy-benefit h3 {
+  margin: 0 0 8px;
+  color: #172554;
+  font-size: 1.05rem;
+}
+
+.smartbuy-benefit p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .smartbuy-intro {
+    padding: 24px 18px;
+  }
+
+  .smartbuy-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SmartBuy budget filter */
+
+.budget-filter {
+  margin: 24px 0;
+  padding: 24px;
+  background: #eef5e8;
+  border: 1px solid #d8e7cb;
+  border-radius: 14px;
+}
+
+.budget-filter h2 {
+  margin: 0 0 8px;
+  color: #25451e;
+  font-size: 1.35rem;
+}
+
+.budget-filter p {
+  color: #52634c;
+}
+
+.budget-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.budget-controls input {
+  width: 220px;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.budget-controls button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #6b9d43;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.budget-controls button:hover {
+  background: #527d32;
+}
+
+/* SmartBuy interest selection */
+
+.budget-filter label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 600;
+}
+
+.budget-filter select {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 1rem;
+}
+
+.budget-filter h3 {
+  margin: 22px 0 12px;
+  color: #25451e;
+}
+
+.recommendation-count {
+  margin: 20px 0;
+  color: #52634c;
+  font-weight: 600;
+}
+
+.status-message button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6b9d43;
+  color: white;
+  cursor: pointer;
+}
+
+/* Home page personalization form */
+
+.personalize-form {
+  max-width: 680px;
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  text-align: left;
+}
+
+.personalize-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personalize-field label {
+  font-weight: 600;
+  color: #172554;
+}
+
+.personalize-field input,
+.personalize-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.personalize-form > button {
+  justify-self: center;
+  grid-column: 1 / -1;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .personalize-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SmartBuy recommendation summary */
+
+.recommendation-summary {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: #eef5e8;
+  border: 1px solid #d8e7cb;
+  border-radius: 14px;
+}
+
+.recommendation-summary h2 {
+  margin-top: 0;
+  color: #25451e;
+}
+
+.recommendation-summary p {
+  margin: 8px 0;
+  color: #52634c;
+}
+
+/* SmartBuy product comparison */
+
+.compare-page > h1 {
+  margin-bottom: 8px;
+}
+
+.compare-selectors,
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.compare-selectors label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.compare-selectors select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d8e7cb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.comparison-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #d8e7cb;
+  border-radius: 14px;
+}
+
+.comparison-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.comparison-card h2 {
+  font-size: 1.2rem;
+}
+
+.comparison-price {
+  color: #426d2b;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.comparison-card a {
+  color: #426d2b;
+  font-weight: 600;
+}
+
+.comparison-result {
+  padding: 20px;
+  background: #eef5e8;
+  border-radius: 12px;
+}
+
+@media (max-width: 650px) {
+  .compare-selectors,
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SmartBuy price analysis */
+
+.comparison-result h2 {
+  color: #25451e;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.value-note {
+  margin-top: 16px;
+  padding: 14px;
+  background: #ffffff;
+  border-left: 4px solid #6b9d43;
+  border-radius: 6px;
+  color: #52634c;
+}
+
+/* Saved shopping preferences */
+
+.clear-preferences-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 10px 16px;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #25451e;
+  cursor: pointer;
+}
+
+.preferences-status {
+  color: #25451e;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* SmartBuy wishlist button */
+
+.wishlist-toggle {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid #d8e7cb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #426d2b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wishlist-toggle:hover {
+  background: #eef5e8;
+}
+
+.wishlist-remove {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e5bcbc;
+  border-radius: 8px;
+  background: #fff;
+  color: #a12b2b;
+  cursor: pointer;
+}
+
+.wishlist-empty {
+  margin-top: 24px;
+  padding: 28px;
+  text-align: center;
+  background: #f5f7ff;
+  border-radius: 14px;
+}
+
+.wishlist-card {
+  min-width: 0;
+}
+
+/* SmartBuy wishlist budget summary */
+
+.wishlist-budget {
+  margin: 24px 0 32px;
+  padding: 24px;
+  background: #f5f8f1;
+  border: 1px solid #d8e7cb;
+  border-radius: 14px;
+}
+
+.wishlist-budget h2 {
+  margin-top: 0;
+  color: #25451e;
+}
+
+.wishlist-budget-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+  margin-bottom: 24px;
+}
+
+.wishlist-budget-input label {
+  font-weight: 600;
+}
+
+.wishlist-budget-input input {
+  padding: 12px;
+  border: 1px solid #cbd8c2;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.wishlist-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 14px 0;
+}
+
+.wishlist-total strong {
+  font-size: 1.1rem;
+}
+
+.budget-ok {
+  color: #426d2b;
+}
+
+.budget-over {
+  color: #b42318;
+}
+
+.wishlist-budget-track {
+  height: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  background: #e0e7da;
+  border-radius: 99px;
+}
+
+.wishlist-budget-fill {
+  height: 100%;
+  background: #6b9d43;
+  transition: width 0.2s ease;
+}
+
+.wishlist-budget-fill.over {
+  background: #b42318;
+}
+
+.wishlist-budget-note {
+  margin-bottom: 0;
+  color: #52634c;
+  line-height: 1.6;
+}
+
+/* SmartBuy personalized recommendations */
+
+.recommendation-info {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid #d8e7cb;
+  border-radius: 12px;
+  background: #f5f8f1;
+}
+
+.recommendation-info h2 {
+  margin-top: 0;
+}
+
+.recommendation-info p {
+  margin: 10px 0;
+}
+
+.recommendation-note {
+  color: #64705e;
+  margin-bottom: 20px;
+}
+
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.recommendation-reason {
+  flex: 1;
+  margin-top: 12px;
+  padding: 14px;
+  background: #f5f8f1;
+  border: 1px solid #dce7d4;
+  border-radius: 10px;
+}
+
+.recommendation-reason ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.recommendation-reason li {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.recommendation-budget-section,
+.recommendation-discover {
+  margin-top: 32px;
+}
+
+.recommendation-budget-section h2,
+.recommendation-discover h2 {
+  margin-bottom: 10px;
+}
+
+.recommendation-disclaimer {
+  margin-top: 28px;
+  color: #64705e;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.recommendation-match-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.recommendation-match-track {
+  height: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: #e0e7da;
+  border-radius: 99px;
+}
+
+.recommendation-match-fill {
+  height: 100%;
+  background: #6b9d43;
+  border-radius: 99px;
+  transition: width 0.2s ease;
+}
+
+.budget-status {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.budget-status p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.budget-status-ok {
+  background: #eaf5e4;
+  color: #315f26;
+  border: 1px solid #c9e2bc;
+}
+
+.budget-status-over {
+  background: #fff0ed;
+  color: #a52a1a;
+  border: 1px solid #f2c5bd;
+}
+
+/* SmartBuy recommendation feedback */
+
+.recommendation-feedback {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #dce7d4;
+}
+
+.recommendation-feedback > strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feedback-btn {
+  padding: 9px 12px;
+  border: 1px solid #cbdcc0;
+  border-radius: 8px;
+  background: #fff;
+  color: #315f26;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.feedback-btn:hover {
+  background: #edf5e7;
+}
+
+.feedback-btn.feedback-selected {
+  background: #dceccb;
+  border-color: #6b9d43;
+  font-weight: 600;
+}
+
+.feedback-message {
+  margin: 10px 0 0;
+  color: #52634c;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 18px;
+  background: #f5f8f1;
+  border: 1px solid #dce7d4;
+  border-radius: 12px;
+}
+
+.filter-control {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 160px;
+  flex: 1;
+}
+
+.filter-control label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #315f26;
+}
+
+.filter-control input,
+.filter-control select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #cbdcc0;
+  border-radius: 8px;
+  background: white;
+  color: #263523;
+  font: inherit;
+}
+
+.reset-filters-btn {
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid #6b9d43;
+  border-radius: 8px;
+  background: white;
+  color: #315f26;
+  font: inherit;
+  cursor: pointer;
+}
+
+.reset-filters-btn:hover {
+  background: #eaf5e4;
+}
+
+@media (max-width: 600px) {
+  .product-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filter-control {
+    width: 100%;
+  }
+}
+
+.home-global-search {
+  margin: 28px 0 36px;
+  padding: 28px;
+  text-align: center;
+  background: #f5f8f1;
+  border: 1px solid #dce7d4;
+  border-radius: 14px;
+}
+
+.home-global-search h2 {
+  margin: 0 0 8px;
+}
+
+.home-global-search p {
+  margin: 0 0 18px;
+  color: #64705e;
+}
+
+.home-search-form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #cbdcc0;
+  border-radius: 9px;
+  background: #fff;
+  font: inherit;
+}
+
+.home-search-form input:focus {
+  outline: 2px solid #6b9d43;
+  outline-offset: 2px;
+}
+
+.home-search-form button {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .home-global-search {
+    padding: 20px 14px;
+  }
+
+  .home-search-form {
+    flex-direction: column;
+  }
+
+  .home-search-form button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+﻿services:
+  mysql:
+    image: mysql:8.0
+    container_name: smartbuy-mysql
+    restart: unless-stopped
+    env_file:
+      - ./ecommerce-backend/shopfront/.env
+    volumes:
+      - smartbuy_mysql_data:/var/lib/mysql
+      - ./ecommerce-backend/shopfront/database/01-products.sql:/docker-entrypoint-initdb.d/01-products.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./ecommerce-backend/shopfront
+    container_name: smartbuy-backend
+    restart: unless-stopped
+    env_file:
+      - ./ecommerce-backend/shopfront/.env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    expose:
+      - "8080"
+
+  frontend:
+    build:
+      context: ./ecommerce-frontend/ecommerce-frontend
+    container_name: smartbuy-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8081:80"
+
+volumes:
+  smartbuy_mysql_data:
+
